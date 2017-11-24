@@ -45,11 +45,7 @@ class StudentsRepository
     */
     public function find($studentId)
     {
-//        return Student::with('specialty')->find($studentId);
-        $student = new Student();
-        $student->setHidden(['id']);
-        $student = $student->with('specialty');
-        return $student->get();
+        return Student::with('specialty')->find($studentId)->setHidden(['id']);
     }
 
 

@@ -10,7 +10,7 @@ class StudentsController extends Controller
     protected $students;
 
     /**
-     * Создание нового экземпляра контроллера.
+     * Коснтруктор контроллера.
      *
      * @param  StudentsRepository $students
      */
@@ -26,12 +26,7 @@ class StudentsController extends Controller
 
     public function info($studentId)
     {
-//        ->get(['name', 'photo', 'info', 'specialty' => 'name', 'is_active', 'points'])
-        $test = $this->students->find($studentId);
-//        $test1 = $test->pluck('name', 'title');
-//        $test->pull('name');
-//        $test1 = $test->setVisible('info');
-        return $test;
+        return $this->students->find($studentId);
     }
 
     public function findByStatus($isActive)
