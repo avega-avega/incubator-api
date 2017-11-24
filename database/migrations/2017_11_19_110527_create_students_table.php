@@ -18,11 +18,11 @@ class CreateStudentsTable extends Migration
             $table->string('name');
             $table->string('photo');
             $table->string('info');
-            $table->tinyint('is_active');
+            $table->tinyInteger('is_active');
             $table->integer('points');
-            $table->timestamps();
-            $table->integer('specialty_id')->unsigned();
-            $table->foreign('specialty_id')->references('id')->on('specialty');
+            $table->integer('specialty_id')->unsigned()->nullable();
+
+            $table->foreign('specialty_id')->references('id')->on('specialties');
 
         });
     }

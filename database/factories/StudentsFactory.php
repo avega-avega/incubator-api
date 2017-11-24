@@ -16,9 +16,10 @@ use Faker\Generator as Faker;
 $factory->define(incubator\Student::class, function (Faker $faker) {
     
     return [
-        'name' => $faker->name,
-        'info' => $faker->words($nb = 30, $asText = false),
-        'is_active' => mt_rand(0, 1),
-        'points' => mt_rand(0, 60),
+        'name' => $faker->name(),
+        'photo' => $faker->imageUrl(380, 380, 'cats', true, 'Faker', true),
+        'info' => $faker->sentence(),
+        'is_active' => rand(0, 1),
+        'points' => rand(0, 60),
     ];
 });

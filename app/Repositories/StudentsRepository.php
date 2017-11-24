@@ -6,24 +6,31 @@ use incubator\{Student, Specialty};
 
 class StudentsRepository
 {
-    // /**
-    // * Получить все события по тегу.
-    // *
-    // * @param  string $tagId
-    // * @return Collection
-    // */
-    // public function findByTagId($tagId)
-    // {
-    //     $tag = Tag::find($tagId);
-    //     return $tag->events()
-    //                ->orderBy('created_at', 'desc')
-    //                ->paginate(10);
-    // }
+    public function findByStatus($isActive)
+    {
+        return $this->findByColumn('is_active', $isActive)
+                    ->orderBy('is_active', 'desc')
+                    ->orderBy('points', 'desc')
+                    ->get();
+    }
+
+    public function findBySpecialty($specialtyId)
+    {
+        return $this->findByColumn('specialty_id', $specialtyId)
+                    ->orderBy('is_active', 'desc')
+                    ->orderBy('points', 'desc')
+                    ->get();
+    }
+
+    public function findByColumn($key, $value)
+    {
+        return Student::where($key, '=', $value);
+    }
 
     /**
     * Возвращает список событий, отсортированных по дате, с пагинацией.
     *
-    * @return Collection
+    * @return mixed
     */
     public function get()
     {
@@ -38,9 +45,12 @@ class StudentsRepository
     */
     public function find($studentId)
     {
-        $student = Student::find($studentId);
-        $specialty = $student->specialty;
-        var_dump($specialty->toJson());
-        return Student::find($studentId);
+//        return Student::with('specialty')->find($studentId);
+        $student = new Student();
+        $student->setHidden(['id']);
+        $student = $student->with('specialty');
+        return $student->get();
     }
+
+
 }
