@@ -8,7 +8,7 @@
     git clone https://github.com/avega-avega/incubator-api.git
     ```
 2. Установить [Composer](https://getcomposer.org/download/ "Download Composer") и в корне проекта выполнить команду: `composer install`;
-3. Изменить название файла `.env.example` на `.env` и отредактировать его под своё окружение; 
+3. Создать в корне файл `.env` на основе `.env.example` и отредактировать его под своё окружение; 
 4. Задать ключ для приложения и произвести миграции: 
     ```
     php artisan key:generate
