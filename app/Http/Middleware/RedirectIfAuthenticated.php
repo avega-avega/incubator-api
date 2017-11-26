@@ -1,6 +1,6 @@
 <?php
 
-namespace incubator\Http\Middleware;
+namespace Incubator\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;

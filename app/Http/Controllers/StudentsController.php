@@ -1,9 +1,8 @@
 <?php
 
-namespace incubator\Http\Controllers;
+namespace Incubator\Http\Controllers;
 
-use Illuminate\Http\Request;
-use incubator\Repositories\StudentsRepository;
+use Incubator\Repositories\StudentsRepository;
 
 class StudentsController extends Controller
 {

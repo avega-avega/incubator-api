@@ -1,8 +1,8 @@
 <?php
 
-namespace incubator\Repositories;
+namespace Incubator\Repositories;
 
-use incubator\{Student, Specialty};
+use Incubator\{Student, Specialty};
 
 class StudentsRepository
 {

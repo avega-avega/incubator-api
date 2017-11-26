@@ -1,6 +1,6 @@
 <?php
 
-namespace incubator;
+namespace Incubator;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -11,6 +11,6 @@ class Specialty extends Model
 
     public function students()
     {
-        return $this->belongsToMany('incubator\Student');
+        return $this->belongsToMany('Incubator\Student');
     }
 }

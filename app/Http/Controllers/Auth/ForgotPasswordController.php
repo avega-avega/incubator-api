@@ -1,8 +1,8 @@
 <?php
 
-namespace incubator\Http\Controllers\Auth;
+namespace Incubator\Http\Controllers\Auth;
 
-use incubator\Http\Controllers\Controller;
+use Incubator\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
 
 class ForgotPasswordController extends Controller

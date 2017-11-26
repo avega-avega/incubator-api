@@ -64,17 +64,17 @@ return [
     |
     */
 
-    'providers' => [
-        'users' => [
-            'driver' => 'eloquent',
-            'model' => incubator\User::class,
-        ],
-
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
-    ],
+//    'providers' => [
+//        'users' => [
+//            'driver' => 'eloquent',
+//            'model' => Incubator\User::class,
+//        ],
+//
+//         'users' => [
+//             'driver' => 'database',
+//             'table' => 'users',
+//         ],
+//    ],
 
     /*
     |--------------------------------------------------------------------------

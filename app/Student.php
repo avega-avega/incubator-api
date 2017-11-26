@@ -1,6 +1,6 @@
 <?php
 
-namespace incubator;
+namespace Incubator;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -11,6 +11,6 @@ class Student extends Model
 
     public function specialty()
     {
-        return $this->hasOne('incubator\Specialty', 'id', 'specialty_id');
+        return $this->hasOne('Incubator\Specialty', 'id', 'specialty_id');
     }
 }

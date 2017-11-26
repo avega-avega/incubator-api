@@ -19,6 +19,6 @@ class SpecialtiesTableSeeder extends Seeder
             ['title' => 'Backend'],
         ];
 
-        incubator\Specialty::insert($specialties);
+        Incubator\Specialty::insert($specialties);
     }
 }

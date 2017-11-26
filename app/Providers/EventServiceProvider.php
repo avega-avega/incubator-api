@@ -1,8 +1,7 @@
 <?php
 
-namespace incubator\Providers;
+namespace Incubator\Providers;
 
-use Illuminate\Support\Facades\Event;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 
 class EventServiceProvider extends ServiceProvider
@@ -13,8 +12,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'incubator\Events\Event' => [
-            'incubator\Listeners\EventListener',
+        'Incubator\Events\Event' => [
+            'Incubator\Listeners\EventListener',
         ],
     ];
 

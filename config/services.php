@@ -29,10 +29,10 @@ return [
         'secret' => env('SPARKPOST_SECRET'),
     ],
 
-    'stripe' => [
-        'model' => incubator\User::class,
-        'key' => env('STRIPE_KEY'),
-        'secret' => env('STRIPE_SECRET'),
-    ],
+//    'stripe' => [
+//        'model' => Incubator\User::class,
+//        'key' => env('STRIPE_KEY'),
+//        'secret' => env('STRIPE_SECRET'),
+//    ],
 
 ];

@@ -11,9 +11,9 @@ class StudentsTableSeeder extends Seeder
      */
     public function run()
     {
-        $specialties = incubator\Specialty::get();
+        $specialties = Incubator\Specialty::get();
 
-        factory(incubator\Student::class, 30)->create()->each(function($student) use ($specialties) {
+        factory(Incubator\Student::class, 30)->create()->each(function($student) use ($specialties) {
             $student->specialty_id = $specialties->random(1)->pluck('id')[0];
             $student->save();
         });

@@ -1,6 +1,6 @@
 <?php
 
-namespace incubator\Providers;
+namespace Incubator\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Broadcast;
